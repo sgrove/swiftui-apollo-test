@@ -3,19 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		124C1CD723B9DD7300D0FEB3 /* RemoteImage in Frameworks */ = {isa = PBXBuildFile; productRef = 124C1CD623B9DD7300D0FEB3 /* RemoteImage */; };
+		12C0267723B9DA3A001B2EEE /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 12C0267623B9DA3A001B2EEE /* schema.json */; };
+		12C0267923B9DABB001B2EEE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0267823B9DABB001B2EEE /* API.swift */; };
 		12D767EE23B9D89100FF3BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D767ED23B9D89100FF3BC7 /* AppDelegate.swift */; };
 		12D767F023B9D89100FF3BC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D767EF23B9D89100FF3BC7 /* SceneDelegate.swift */; };
 		12D767F223B9D89100FF3BC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D767F123B9D89100FF3BC7 /* ContentView.swift */; };
 		12D767F423B9D89200FF3BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D767F323B9D89200FF3BC7 /* Assets.xcassets */; };
 		12D767F723B9D89200FF3BC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D767F623B9D89200FF3BC7 /* Preview Assets.xcassets */; };
 		12D767FA23B9D89200FF3BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D767F823B9D89200FF3BC7 /* LaunchScreen.storyboard */; };
+		12D7680323B9D90C00FF3BC7 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 12D7680223B9D90C00FF3BC7 /* Apollo */; };
+		12D7680723B9D97200FF3BC7 /* First.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 12D7680623B9D97200FF3BC7 /* First.graphql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12C0267623B9DA3A001B2EEE /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		12C0267823B9DABB001B2EEE /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		12D767EA23B9D89100FF3BC7 /* iosTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D767ED23B9D89100FF3BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12D767EF23B9D89100FF3BC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,7 @@
 		12D767F623B9D89200FF3BC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		12D767F923B9D89200FF3BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12D767FB23B9D89200FF3BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12D7680623B9D97200FF3BC7 /* First.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = First.graphql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				124C1CD723B9DD7300D0FEB3 /* RemoteImage in Frameworks */,
+				12D7680323B9D90C00FF3BC7 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +67,10 @@
 			isa = PBXGroup;
 			children = (
 				12D767ED23B9D89100FF3BC7 /* AppDelegate.swift */,
+				12C0267823B9DABB001B2EEE /* API.swift */,
 				12D767EF23B9D89100FF3BC7 /* SceneDelegate.swift */,
+				12D7680623B9D97200FF3BC7 /* First.graphql */,
+				12C0267623B9DA3A001B2EEE /* schema.json */,
 				12D767F123B9D89100FF3BC7 /* ContentView.swift */,
 				12D767F323B9D89200FF3BC7 /* Assets.xcassets */,
 				12D767F823B9D89200FF3BC7 /* LaunchScreen.storyboard */,
@@ -82,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12D767FE23B9D89200FF3BC7 /* Build configuration list for PBXNativeTarget "iosTest" */;
 			buildPhases = (
+				12C0267523B9D9EA001B2EEE /* Generate Apollo GraphQL */,
 				12D767E623B9D89100FF3BC7 /* Sources */,
 				12D767E723B9D89100FF3BC7 /* Frameworks */,
 				12D767E823B9D89100FF3BC7 /* Resources */,
@@ -91,6 +105,10 @@
 			dependencies = (
 			);
 			name = iosTest;
+			packageProductDependencies = (
+				12D7680223B9D90C00FF3BC7 /* Apollo */,
+				124C1CD623B9DD7300D0FEB3 /* RemoteImage */,
+			);
 			productName = iosTest;
 			productReference = 12D767EA23B9D89100FF3BC7 /* iosTest.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +137,10 @@
 				Base,
 			);
 			mainGroup = 12D767E123B9D89100FF3BC7;
+			packageReferences = (
+				12D7680123B9D90C00FF3BC7 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				124C1CD523B9DD7200D0FEB3 /* XCRemoteSwiftPackageReference "RemoteImage" */,
+			);
 			productRefGroup = 12D767EB23B9D89100FF3BC7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,6 +155,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D7680723B9D97200FF3BC7 /* First.graphql in Resources */,
+				12C0267723B9DA3A001B2EEE /* schema.json in Resources */,
 				12D767FA23B9D89200FF3BC7 /* LaunchScreen.storyboard in Resources */,
 				12D767F723B9D89200FF3BC7 /* Preview Assets.xcassets in Resources */,
 				12D767F423B9D89200FF3BC7 /* Assets.xcassets in Resources */,
@@ -141,6 +165,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12C0267523B9D9EA001B2EEE /* Generate Apollo GraphQL */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/iosTest/**/*.graphql",
+			);
+			name = "Generate Apollo GraphQL";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		12D767E623B9D89100FF3BC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -148,6 +194,7 @@
 			files = (
 				12D767EE23B9D89100FF3BC7 /* AppDelegate.swift in Sources */,
 				12D767F023B9D89100FF3BC7 /* SceneDelegate.swift in Sources */,
+				12C0267923B9DABB001B2EEE /* API.swift in Sources */,
 				12D767F223B9D89100FF3BC7 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +387,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		124C1CD523B9DD7200D0FEB3 /* XCRemoteSwiftPackageReference "RemoteImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/crelies/RemoteImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		12D7680123B9D90C00FF3BC7 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		124C1CD623B9DD7300D0FEB3 /* RemoteImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 124C1CD523B9DD7200D0FEB3 /* XCRemoteSwiftPackageReference "RemoteImage" */;
+			productName = RemoteImage;
+		};
+		12D7680223B9D90C00FF3BC7 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12D7680123B9D90C00FF3BC7 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 12D767E223B9D89100FF3BC7 /* Project object */;
 }

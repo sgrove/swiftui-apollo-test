@@ -1,0 +1,114 @@
+query Downloads {
+  npm {
+    downloads {
+      lastMonth {
+        count
+      }
+    }
+  }
+}
+
+query Package($name: String = "graphql") {
+  npm {
+    package(name: $name) {
+      homepage
+      id
+      keywords
+      name
+      readme
+      downloads {
+        lastMonth {
+          count
+        }
+      }
+    }
+  }
+}
+
+query GitHub {
+  gitHub {
+    repository(name: "graphql-js", owner: "graphql") {
+      isTemplate
+    }
+  }
+}
+
+query Search($query: String!) {
+  spotify {
+    search(data: { query: $query }) {
+      tracks {
+        name
+        id
+        album {
+          type
+          name
+          uri
+          id
+          artists {
+            name
+            type
+            id
+            href
+          }
+          images {
+            height
+            url
+            width
+          }
+        }
+      }
+    }
+  }
+}
+
+mutation PlayTrack($trackId: String!) {
+  spotify {
+    playTrack(input: { trackIds: [$trackId] }) {
+      player {
+        isPlaying
+      }
+    }
+  }
+}
+
+query SpotifyMe {
+  spotify {
+    me {
+      email
+      displayName
+      id
+      player {
+        isPlaying
+        item {
+          durationMs
+          id
+          name
+          uri
+          album {
+            images {
+              url
+            }
+            artists {
+              name
+              id
+            }
+            name
+          }
+        }
+        device {
+          id
+          name
+          type
+          volumePercent
+        }
+        progressMs
+      }
+      images {
+        height
+        url
+        width
+      }
+    }
+  }
+}
+
